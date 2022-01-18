@@ -22,3 +22,56 @@ POST /login <br/>
 POST /signin
 
 Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+
+
+### Rotas com autenticação
+
+### Animes
+
+Cadastrar
+
+POST /animes<br/>
+
+Utilizada para cadastrar animes do usuario, necessario o "userId" para a requisição, os demais dados são opcionais
+
+{
+  "name": "Haikyuu",
+  "seasons": 4,
+  "category": "sports",
+  "userId": 233
+}
+
+Caso dê tudo certo, a resposta será assim:
+
+POST /animes - FORMATO DA RESPOSTA - STATUS 201
+
+POST /mangas<br/>
+
+Utilizada para cadastrar mangas do usuario, necessario o "userId" para a requisição, os demais dados são opcionais
+
+{
+  "name": "One Piece",
+  "chapters": "infinito",
+  "category": "shounen",
+  "userId": 233
+}
+
+Caso dê tudo certo, a resposta será assim:
+
+POST /mangas - FORMATO DA RESPOSTA - STATUS 201
+
+### Possiveis erros
+
+POST /mangas - FORMATO DA RESPOSTA - STATUS 401
+
+"Missing authorization header"
+
+Falta a autenticação do usuario
+
+
+
+POST /mangas - FORMATO DA RESPOSTA - STATUS 403
+
+"Private resource creation: request body must have a reference to the owner id"
+
+Faltou colocar o userId no corpo da requisição

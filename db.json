@@ -6,6 +6,22 @@
       "name": "Kenzinho",
       "age": 38,
       "id": 1
+    },
+    {
+      "email": "grover@mail.com",
+      "password": "$2a$10$kNXflvlTamYFReSn40J2sOLNyXqtYpCZwSUNBE/lg7KLlwrs4hW1y",
+      "name": "Grover",
+      "age": 21,
+      "id": 2
     }
-  ]
+  ],
+  "animes": [
+    {
+      "name": "Re:Zero",
+      "episodes": 24,
+      "userId": 2,
+      "id": 1
+    }
+  ],
+  "mangas":[]
 }
